@@ -5,15 +5,17 @@
   
 
   
-  <title>forth blog | Hexo</title>
+  <title>biyingtranslation | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="article">
-<meta property="og:title" content="forth blog">
-<meta property="og:url" content="http://yoursite.com/2020/04/18/forth-blog/index.html">
+  <meta name="description" content="##import requestsimport json def get_response():    url &#x3D; “https:&#x2F;&#x2F;cn.bing.com&#x2F;tlookupv3?isVertical&#x3D;1&amp;&amp;IG&#x3D;E5735EB3C4FF40969C257FA39910DAF4&amp;IID&#x3D;translator.5028.4&quot;    text &#x3D; input(“当前为必">
+<meta property="og:type" content="article">
+<meta property="og:title" content="biyingtranslation">
+<meta property="og:url" content="http://yoursite.com/2020/04/25/biyingtranslation/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="##import requestsimport json def get_response():    url &#x3D; “https:&#x2F;&#x2F;cn.bing.com&#x2F;tlookupv3?isVertical&#x3D;1&amp;&amp;IG&#x3D;E5735EB3C4FF40969C257FA39910DAF4&amp;IID&#x3D;translator.5028.4&quot;    text &#x3D; input(“当前为必">
 <meta property="og:locale" content="en_US">
-<meta property="article:published_time" content="2020-04-18T14:19:35.000Z">
-<meta property="article:modified_time" content="2020-04-18T14:19:35.878Z">
+<meta property="article:published_time" content="2020-04-25T14:16:14.000Z">
+<meta property="article:modified_time" content="2020-04-25T14:17:04.644Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary">
   
@@ -64,10 +66,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-forth-blog" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-biyingtranslation" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2020/04/18/forth-blog/" class="article-date">
-  <time datetime="2020-04-18T14:19:35.000Z" itemprop="datePublished">2020-04-18</time>
+    <a href="/2020/04/25/biyingtranslation/" class="article-date">
+  <time datetime="2020-04-25T14:16:14.000Z" itemprop="datePublished">2020-04-25</time>
 </a>
     
   </div>
@@ -78,7 +80,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      forth blog
+      biyingtranslation
     </h1>
   
 
@@ -86,11 +88,16 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p>##<br>import requests<br>import json</p>
+<p>def get_response():<br>    url = “<a href="https://cn.bing.com/tlookupv3?isVertical=1&amp;&amp;IG=E5735EB3C4FF40969C257FA39910DAF4&amp;IID=translator.5028.4&quot;" target="_blank" rel="noopener">https://cn.bing.com/tlookupv3?isVertical=1&amp;&amp;IG=E5735EB3C4FF40969C257FA39910DAF4&amp;IID=translator.5028.4&quot;</a><br>    text = input(“当前为必应翻译，请宁输入要翻译的内容：”)<br>    data = {<br>        “from”: “zh-Hans”,<br>        “to”: “en”,<br>        “text”: text<br>    }<br>    response = requests.post(url=url, data=data)<br>    return response.json()[0]</p>
+<p>def parser(data):<br>    result = [item[“normalizedTarget”] for item in data[“translations”]]<br>    print(result)</p>
+<p>def run():<br>    data = get_response()<br>    parser(data)</p>
+<p>if <strong>name</strong> == “<strong>main</strong>“:<br>    run()</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/18/forth-blog/" data-id="ck9fpl2h30003wsdu7ohwhz2i" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/biyingtranslation/" data-id="ck9fpl2gx0001wsduho1q9cch" class="article-share-link">Share</a>
       
       
     </footer>
@@ -99,19 +106,10 @@
     
 <nav id="article-nav">
   
-    <a href="/2020/04/25/Get-ip-address/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Get ip address
-        
-      </div>
-    </a>
   
-  
-    <a href="/2020/04/16/third-blog/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2020/04/25/province-links/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">third-blog</div>
+      <div class="article-nav-title">province links</div>
     </a>
   
 </nav>
