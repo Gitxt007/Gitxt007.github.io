@@ -64,6 +64,53 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-BzhancommentsB" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/04/25/BzhancommentsB/" class="article-date">
+  <time datetime="2020-04-25T14:33:32.000Z" itemprop="datePublished">2020-04-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/04/25/BzhancommentsB/">BzhancommentsB</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##<br>import urllib.request<br>import urllib.parse<br>import http.cookiejar<br>import gzip<br>import json</p>
+<p>def crawler():<br>    url = “<a href="https://api.bilibili.com/x/v2/reply/add&quot;" target="_blank" rel="noopener">https://api.bilibili.com/x/v2/reply/add&quot;</a><br>    headers = {<br>        “Accept”: “application/json, text/javascript, <em>/</em>; q=0.01”,<br>        “Accept-Encoding”: “gzip, deflate, br”,<br>        “Accept-Language”: “zh-CN,zh;q=0.9,en;q=0.8”,<br>        “Connection”: “keep-alive”,<br>        “Content-Type”: “application/x-www-form-urlencoded; charset=UTF-8”,<br>        “Cookie”: “_uuid=A674206E-E048-2012-1032-BF0FD75BC70E99970infoc; buvid3=F4A09182-27A1-4DAD-8F93-C3164E9CAF9053914infoc; sid=6rxdamki; im_notify_type_478149120=0; CURRENT_FNVAL=16; LIVE_BUVID=AUTO4915829617489886; rpdid=|(J|YkRm|Ruk0J’ul)kmYu~l|; DedeUserID=478149120; DedeUserID__ckMd5=b117727f75a94a18; SESSDATA=50d5ba27%2C1601444487%2Cc9727*41; bili_jct=fda4acd2a3e2f0fa699ee9e33bbdc774; CURRENT_QUALITY=80; bp_t_offset_478149120=377922904044417661; PVID=1”,<br>        “Host”: “api.bilibili.com”,<br>        “Origin”: “<a href="https://www.bilibili.com&quot;" target="_blank" rel="noopener">https://www.bilibili.com&quot;</a>,<br>        “Referer”: “<a href="https://www.bilibili.com/video/BV1pV411Z7RC&quot;" target="_blank" rel="noopener">https://www.bilibili.com/video/BV1pV411Z7RC&quot;</a>,<br>        “Sec-Fetch-Dest”: “empty”,<br>        “Sec-Fetch-Mode”: “cors”,<br>        “Sec-Fetch-Site”: “same-site”,<br>        “User-Agent”: “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.113 Safari/537.36”,<br>    }<br>    form_data = {<br>        “oid”: 412845071,<br>        “type”: 1,<br>        “message”: “你想回学校了吗？”,<br>        “plat”: 1,<br>        “jsonp”: “jsonp”,<br>        “csrf”: “fda4acd2a3e2f0fa699ee9e33bbdc774”<br>    }</p>
+<pre><code>data = bytes(urllib.parse.urlencode(form_data),encoding=&quot;utf-8&quot;)
+r = urllib.request.Request(url=url,data=data,headers=headers)
+cookie = http.cookiejar.CookieJar()
+handler = urllib.request.HTTPCookieProcessor(cookie)
+opener = urllib.request.build_opener(handler)
+#urllib.request.install_opener(opener)
+response = opener.open(r)
+resp = gzip.GzipFile(fileobj=response)
+print(resp.read().decode(&quot;utf-8&quot;))</code></pre><p>crawler()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsB/" data-id="ck9fq7ehm0005yoduhvbrht9w" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-BzhancommentsA" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/04/25/BzhancommentsA/" class="article-date">
@@ -96,7 +143,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsA/" data-id="ck9fq3jaw0004pkdu6eje0sia" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsA/" data-id="ck9fq7eh80000yodueui42idv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -137,7 +184,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/biyingTranslation/" data-id="ck9fq3jau0002pkdugi6k40fm" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/biyingTranslation/" data-id="ck9fq7ehi0002yodu40ql5ucy" class="article-share-link">Share</a>
       
       
     </footer>
@@ -210,7 +257,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/province-links/" data-id="ck9fq3jav0003pkdugt86h6q4" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/province-links/" data-id="ck9fq7ehl0004yodu9284g66v" class="article-share-link">Share</a>
       
       
     </footer>
@@ -247,7 +294,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/Get-ip-address/" data-id="ck9fq3jak0000pkduc0u9aaq9" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/Get-ip-address/" data-id="ck9fq7ehf0001yodu7pr5bku0" class="article-share-link">Share</a>
       
       
     </footer>
@@ -296,7 +343,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/hello-world/" data-id="ck9fq3jaq0001pkdu0t1n1915" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/16/hello-world/" data-id="ck9fq7ehk0003yodu6z5na2w9" class="article-share-link">Share</a>
       
       
     </footer>
@@ -337,6 +384,10 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       <ul>
         
           <li>
+            <a href="/2020/04/25/BzhancommentsB/">BzhancommentsB</a>
+          </li>
+        
+          <li>
             <a href="/2020/04/25/BzhancommentsA/">BzhancommentsA</a>
           </li>
         
@@ -350,10 +401,6 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
         
           <li>
             <a href="/2020/04/25/Get-ip-address/">Get ip address</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/16/hello-world/">Hello World</a>
           </li>
         
       </ul>
