@@ -64,6 +64,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-biyingbizhi" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2020/05/15/biyingbizhi/" class="article-date">
+  <time datetime="2020-05-15T05:08:10.741Z" itemprop="datePublished">2020-05-15</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/05/15/biyingbizhi/">biyingbizhi</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<p>title: biyingbizhi<br>date: 2020-05-15 13:08:10<br>tags:<br>##<br>import requests<br>from lxml import etree</p>
+<p>class BingCrawler():<br>    def <strong>init</strong>(self):<br>        self.BASE_URL = “<a href="https://bing.ioliu.cn&quot;" target="_blank" rel="noopener">https://bing.ioliu.cn&quot;</a><br>        self.TOTAL_PAGE = 124<br>        self.headers = {<br>            “user-agent”: “Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.149 Safari/537.36”<br>        }</p>
+<pre><code>def spider(self):
+    session = requests.Session()
+    for index in range(1 ,self.TOTAL_PAGE+1):
+        url = self.BASE_URL + f&quot;/?p={index}&quot;
+        response = session.get(url=url, headers=self.headers)
+        yield response.content.decode(&quot;utf8&quot;)
+
+@staticmethod
+def parser(html):
+    selector = etree.HTML(html)
+    url_list = selector.xpath(&quot;//div[@class=&apos;item&apos;]//div[@class=&apos;options&apos;]/a[2]/@href&quot;)
+    return url_list
+
+def save_picture(self, url_list):
+    session = requests.Session()
+    for url in url_list:
+        file_name = url.split(&quot;/&quot;)[2][:-15] + &quot;.jpg&quot;
+        picture_url =  self.BASE_URL + url
+        response = session.get(picture_url, headers=self.headers)
+        with open(file_name, &quot;wb&quot;) as file:
+            file.write(response.content)
+
+def run(self):
+    html_gen = self.spider()
+    for html in html_gen:
+        url_list = self.parser(html)
+        self.save_picture(url_list)</code></pre><p>if <strong>name</strong> == ‘<strong>main</strong>‘:<br>    bing_spider = BingCrawler()<br>    bing_spider.run()</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2020/05/15/biyingbizhi/" data-id="cka7r4ufn0004qcdug7212ja7" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-笔记" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2020/05/15/%E7%AC%94%E8%AE%B0/" class="article-date">
@@ -497,7 +563,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/05/15/%E7%AC%94%E8%AE%B0/" data-id="cka7qcav300065cdubs5w55a7" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/05/15/%E7%AC%94%E8%AE%B0/" data-id="cka7r4ufr0007qcduh2ujagw1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -544,7 +610,7 @@ print(resp.read().decode(&quot;utf-8&quot;))</code></pre><p>crawler()</p>
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsB/" data-id="cka7qcauk00025cdu2rjjhbrg" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsB/" data-id="cka7r4ufh0001qcdu4vaz6y72" class="article-share-link">Share</a>
       
       
     </footer>
@@ -586,7 +652,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsA/" data-id="cka7qcaud00005cdua6q17hxq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/BzhancommentsA/" data-id="cka7r4ufb0000qcdugz3x79mu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -627,7 +693,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/biyingTranslation/" data-id="cka7qcaul00035cdu0vds27pb" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/biyingTranslation/" data-id="cka7r4ufl0003qcducvo87an4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -700,7 +766,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/province-links/" data-id="cka7qcaun00055cdu3wus3is1" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/province-links/" data-id="cka7r4ufq0006qcdubjigal48" class="article-share-link">Share</a>
       
       
     </footer>
@@ -737,7 +803,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/25/Get-ip-address/" data-id="cka7qcaui00015cdu591j1p1b" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/25/Get-ip-address/" data-id="cka7r4ufk0002qcdu782y1lxd" class="article-share-link">Share</a>
       
       
     </footer>
@@ -786,7 +852,7 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2020/04/16/hello-world/" data-id="cka7qcaum00045cdu28lm53pr" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2020/04/16/hello-world/" data-id="cka7r4ufo0005qcdu84u06pe4" class="article-share-link">Share</a>
       
       
     </footer>
@@ -827,6 +893,10 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
       <ul>
         
           <li>
+            <a href="/2020/05/15/biyingbizhi/">biyingbizhi</a>
+          </li>
+        
+          <li>
             <a href="/2020/05/15/%E7%AC%94%E8%AE%B0/">笔记</a>
           </li>
         
@@ -840,10 +910,6 @@ return response.json()</code></pre><p>def parser(data):<br>    C = data[“data�
         
           <li>
             <a href="/2020/04/25/biyingTranslation/">biyingTranslation</a>
-          </li>
-        
-          <li>
-            <a href="/2020/04/25/province-links/">province links</a>
           </li>
         
       </ul>
